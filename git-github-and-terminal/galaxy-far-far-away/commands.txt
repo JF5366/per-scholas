@@ -1,0 +1,58 @@
+part 1
+mkdir death_star
+cd death_star
+touch darth_vader.txt pricess_leia.txt storm_trooper.txt
+cd ..
+mkdir tatooine
+cd tatooine
+touch luke.txt ben_kenobi.txt
+mkdir millenium_falcon
+cd millenium_falcon
+touch han_solo.txt chewbaca.txt
+
+part 2.mv
+cd ..
+mv ben_kenobi.txt obi_wan.txt
+
+part 2.cp
+cp ../death_star/storm_trooper.txt .
+
+part 4.mv
+mv luke.txt obi_wan.txt ../tatooine/millenium_falcon
+mv millenium_falcon/ ~/desktop/git-github-and-terminal/galaxy-far-far-away/
+cd galaxy-far-far-away/
+mv millenium_falcon/ ~/desktop/git-github-and-terminal/galaxy-far-far-away/death_star/
+mv princess_leia.txt millenium_falcon/
+
+part 5
+rm obi_wan.txt
+
+part 6
+ cd ~/Desktop/git-github-and-terminal/galaxy-far-far-away/
+mkdir yavin_4
+ cd death_star/
+mv millenium_falcon/ ~/Desktop/git-github-and-terminal/galaxy-far-far-away/yavin_4/
+mkdir x_wing
+mv princess_leia.txt ..
+mv luke.txt ~/Desktop/git-github-and-terminal/galaxy-far-far-away/yavin_4/x_wing/
+ mv millenium_falcon/ x_wing/ ~/Desktop/git-github-and-terminal/galaxy-far-far-away
+ cd death_star/
+mkdir tie_fighter_1 tie_fighter_2 tie_fighter_3
+mv darth_vader.txt tie_fighter_1
+cp storm_trooper.txt tie_fighter_2/ 
+cp storm_trooper.txt tie_fighter_3/
+mv tie_fighter_1 ..
+mv tie_fighter_2 ..
+mv tie_fighter_3 ..
+
+part 7
+rm -r tie_fighter_2
+rm -r tie_fighter_3
+
+part 8
+cd x_wing/
+touch the_force.txt
+rm -r death_star
+cd ..
+ mv millenium_falcon/ yavin_4/
+mv x_wing/ yavin_4/
