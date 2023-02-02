@@ -96,19 +96,19 @@ deck1.setup()
 
 
 //Part 4: Game Play
-let playNum = player1.bankaccount       //loop through rounds:
-let round = 0
-while (playNum > 0) {
-  // for (let i = 1; i > 0; i++) {
-      doLoop();
-      round++
-  }
-  if(playNum <= 0){
-    gameOver()
-  }
+// let playNum = player1.bankaccount       //loop through rounds:
+// let round = 0
+// while (playNum > 0) {
+//   // for (let i = 1; i > 0; i++) {
+//       doLoop();
+//       round++
+//   }
+//   if(playNum <= 0){
+//     gameOver()
+//   }
 
-//Loop:
-function doLoop(){
+// //Loop:
+// function doLoop(){
   
 //1. Are you ready to play? 
 
@@ -124,7 +124,9 @@ function doLoop(){
   nobtn.addEventListener("click", function () {
     mydiv.style.display = "";
     options.style.display = "none";
-    message.innerHTML = "Ok fine, dont play with me :( " 
+    message.innerHTML = "Ok fine, dont play with me :(  \n\n Game Over" 
+    mydiv.style.height = "5em";
+    mydiv.style.padding = "1em";
  });
 
 var options = document.querySelector('.options')
@@ -132,36 +134,63 @@ var message = document.querySelector('.message')
 
 //2. If click yes -- dealing message, and deal hands
 
+let roundNum = 1;
 
+function gameStart(){ 
+   setTimeout(() => {
+  mydiv.style.display = "";
+  options.style.display = "none";
+  message.innerHTML = "Round " + roundNum
+  mydiv.style.height = "5em";
+}, 500);
+setTimeout(() => {
+  mydiv.style.display = "";
+  options.style.display = "none";
+  message.innerHTML = "Dealing...."
+  mydiv.style.height = "5em";
+}, 1500);
+setTimeout(() => {
+  mydiv.style.display = "none";
+  deal();
+}, 3000);
+setTimeout(() => {
+  placeBet();
+}, 4500);
+setTimeout(() => {
+  mydiv.style.display = "none";
+}, 6000);
+setTimeout(() => {
+  findWinner()
+}, 8000);
+setTimeout(() => {
+  nextRound()
+}, 12000);
+}
 mybtn.addEventListener('click', () => {
-  setTimeout(() => {
-    mydiv.style.display = "";
-    options.style.display = "none";
-    message.innerHTML = "Round" + i
-  }, 500);
-  setTimeout(() => {
-    mydiv.style.display = "";
-    options.style.display = "none";
-    message.innerHTML = "Dealing...."
-  }, 1000);
-  setTimeout(() => {
-    mydiv.style.display = "none";
-    deal();
-  }, 3000);
-  setTimeout(() => {
-    placeBet();
-  }, 4500);
-  setTimeout(() => {
-    mydiv.style.display = "none";
-  }, 6000);
-  setTimeout(() => {
-    findWinner()
-  }, 8000);
-  // setTimeout(() => {
-  //   announceWinner()
-  // }, 10000);
+  gameStart();
 });
+
 //Reorganize: separate code into funcitons - then call those functions in the settimeout
+let p1 = document.querySelector("#p1")
+let p2 = document.querySelector("#p2")
+let o1 = document.querySelector("#o1")
+let o2 = document.querySelector("#o2")
+let r1 = document.querySelector("#r1")
+let r2 = document.querySelector("#r2")
+let r3 = document.querySelector("#r3")
+let r4 = document.querySelector("#r4")
+let r5 = document.querySelector("#r5")
+
+let cardp1 = document.querySelector("#cardp1")
+let cardp2 = document.querySelector("#cardp2")
+let cardo1 = document.querySelector("#cardo1")
+let cardo2 = document.querySelector("#cardo2")
+let cardr1 = document.querySelector("#cardr1")
+let cardr2 = document.querySelector("#cardr2")
+let cardr3 = document.querySelector("#cardr3")
+let cardr4 = document.querySelector("#cardr4")
+let cardr5 = document.querySelector("#cardr5")
+
 
 //Deal:
 function deal (){
@@ -171,15 +200,18 @@ function deal (){
   console.log(river)
   console.log(player1.hand[0])
   console.log(player1.hand[1])
-  document.querySelector("#p1").innerHTML = player1.hand[0].name;
-  document.querySelector("#p2").innerHTML = player1.hand[1].name;
-  document.querySelector("#o1").innerHTML = opponent.hand[0].name;
-  document.querySelector("#o2").innerHTML = opponent.hand[1].name;
-  document.querySelector("#r1").innerHTML = river[0].name;
-  document.querySelector("#r2").innerHTML = river[1].name;
-  document.querySelector("#r3").innerHTML = river[2].name;
-  document.querySelector("#r4").innerHTML = river[3].name;
-  document.querySelector("#r5").innerHTML = river[4].name;
+  p1.innerHTML = player1.hand[0].name;
+  p2.innerHTML = player1.hand[1].name;
+  o1.innerHTML = opponent.hand[0].name;
+  o2.innerHTML = opponent.hand[1].name;
+  r1.innerHTML = river[0].name;
+  r2.innerHTML = river[1].name;
+  r3.innerHTML = river[2].name;
+  r4.innerHTML = river[3].name;
+  r5.innerHTML = river[4].name;
+  // if(p1.innerHTML == "AC"){
+  //   cardp1.style.backgroundimage = ;
+  // }
 }
 
 
@@ -202,27 +234,41 @@ function placeBet (){
 function findWinner(){
   let hand1 = `${river[0].name} ${river[1].name} ${river[2].name} ${river[3].name} ${river[4].name} ${player1.hand[0].name} ${player1.hand[1].name}`
   let hand2 = `${river[0].name} ${river[1].name} ${river[2].name} ${river[3].name} ${river[4].name} ${opponent.hand[0].name} ${player1.hand[1].name}`
-  // console.log(hand1)
-  // console.log(hand2)
-  let winner = poker.judgeWinner([hand1, hand2]); // 1
+  let winner = poker.judgeWinner([hand1, hand2]); 
 
   if(winner == 0){
     mydiv.style.display = "";
     options.style.display = "none";
-    message.innerHTML = "You won round i!"
+    message.innerHTML = "You won round " + roundNum + " !"
     player1.win()
     playerBank.innerHTML = player1.bankaccount
     opponentBank.innerHTML = opponent.bankaccount
+    console.log(1)
   }else{
     mydiv.style.display = "";
     options.style.display = "none";
-    message.innerHTML = "Sorry, your opponent won round i."
+    mydiv.style.height = "6em";
+    message.innerHTML = "Sorry, your opponent won round " + roundNum + " !"
     opponent.win()
     playerBank.innerHTML = player1.bankaccount
     opponentBank.innerHTML = opponent.bankaccount
+    console.log(2)
   }
 }
-} //end of the doLoop()
+
+
+function nextRound(){
+  if(player1.bankaccount > 0){
+    roundNum++;
+    message.innerHTML = "Would you like to play the next round?"
+    mydiv.style.height = "";
+    options.style.display = "";
+    mydiv.style.display = "block"
+    //gameStart();
+  }
+}
+
+
 
 
 //Game Over
