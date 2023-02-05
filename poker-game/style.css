@@ -64,15 +64,14 @@ h1{
   padding: 2px;
 }
 .table{
-  background-color: green;
+  background-color: rgba(27, 107, 27, 0.712);
   display: flex;
   position: absolute;
   top: 50px;
   right: 10px;
   bottom: 50px;
   left: 10px;
-  opacity: 0.7;
-  border: 5px solid red;
+  border: 5px solid rgba(231, 11, 11, 0.836);
   border-radius: 30%;
   padding: 10px;
   margin: 50px 20px;
@@ -80,7 +79,7 @@ h1{
 
 
 .player{
-  background-color: #1aa21a;
+  background-color: #3d853dab;
   width: 200px;
   height: 100px;
   position: absolute;
@@ -94,7 +93,7 @@ h1{
   align-items: center;
 }
 .opponent{
-  background-color: #1aa21a;
+  background-color: #3d853dab;
   width: 200px;
   height: 100px;
   position: absolute;
@@ -125,12 +124,16 @@ h1{
 }
 
 .card{
-  background-color: red;
+  background-image: url('../CardImages/cardBack.png');
+  background-size: cover;
   width: 2em;
   height: 3em;
   margin: 3px;
   display: flex;
 }
+/* #cardp1{
+  background-image: url('../CardImages/AH.png');
+} */
 #p1, #p2, #o1, #o2, #r1, #r2, #r3, #r4, #r5{
 color: black;
 font-weight: bold;

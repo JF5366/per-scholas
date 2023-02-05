@@ -66,24 +66,23 @@ class Deck{
   }
   deal(){  //push 5 cards to the table, 2 to each hand
      for(let i=0; i<2; i++){  //loop twice to put 2 cards in players hand
-       let cardIndex = Math.floor(Math.random()*this.deck.length) //get random num
-       player1.hand.push(this.deck[cardIndex])           //push that card to a hand
-       let removedCard = this.deck.splice(cardIndex, 1)   //delete that card from the array
+      let cardIndex = Math.floor(Math.random()*this.deck.length) //get random num
+      player1.hand.unshift(this.deck[cardIndex])           //push that card to a hand
+      let removedCard = this.deck.splice(cardIndex, 1)   //delete that card from the array
      }
     for(let i=0; i<2; i++){  //loop twice to put 2 cards in opponents hand
        let cardIndex = Math.floor(Math.random()*this.deck.length) //get random num
-       opponent.hand.push(this.deck[cardIndex])           //push that card to a hand
+       opponent.hand.unshift(this.deck[cardIndex])           //push that card to a hand
        let removedCard = this.deck.splice(cardIndex, 1)   //delete that card from the array
      }
       for(let i=0; i<5; i++){  //loop twice to put 2 cards in opponents hand
        let cardIndex = Math.floor(Math.random()*this.deck.length) //get random num
-       river.push(this.deck[cardIndex])           //push that card to the river
+       river.unshift(this.deck[cardIndex])           //push that card to the river
        let removedCard = this.deck.splice(cardIndex, 1)   //delete that card from the array
      }
   }
 }
 
-//Part 2: Push cards to deck, and deal deck to hands
 let deck1 = new Deck()
 deck1.setup()
 // console.log(player1.hand)
@@ -95,23 +94,8 @@ deck1.setup()
 
 
 
-//Part 4: Game Play
-// let playNum = player1.bankaccount       //loop through rounds:
-// let round = 0
-// while (playNum > 0) {
-//   // for (let i = 1; i > 0; i++) {
-//       doLoop();
-//       round++
-//   }
-//   if(playNum <= 0){
-//     gameOver()
-//   }
-
-// //Loop:
-// function doLoop(){
-  
+//Part 2: Game Play
 //1. Are you ready to play? 
-
   var mydiv = document.querySelector("#box")   // Div appears to for player to choose yes or no
  // mydiv.style.display = "block"
   var mybtn = document.querySelector("#yes")
@@ -133,11 +117,10 @@ var options = document.querySelector('.options')
 var message = document.querySelector('.message')
 
 //2. If click yes -- dealing message, and deal hands
-
 let roundNum = 1;
 
-function gameStart(){ 
-   setTimeout(() => {
+function gameStart(){   //Gameplay "loop" set through this function with timeouts
+setTimeout(() => {
   mydiv.style.display = "";
   options.style.display = "none";
   message.innerHTML = "Round " + roundNum
@@ -151,8 +134,8 @@ setTimeout(() => {
 }, 1500);
 setTimeout(() => {
   mydiv.style.display = "none";
-  deal();
-}, 3000);
+  dealNew();
+  }, 3000);
 setTimeout(() => {
   placeBet();
 }, 4500);
@@ -170,53 +153,210 @@ mybtn.addEventListener('click', () => {
   gameStart();
 });
 
-//Reorganize: separate code into funcitons - then call those functions in the settimeout
-let p1 = document.querySelector("#p1")
-let p2 = document.querySelector("#p2")
-let o1 = document.querySelector("#o1")
-let o2 = document.querySelector("#o2")
-let r1 = document.querySelector("#r1")
-let r2 = document.querySelector("#r2")
-let r3 = document.querySelector("#r3")
-let r4 = document.querySelector("#r4")
-let r5 = document.querySelector("#r5")
-
-let cardp1 = document.querySelector("#cardp1")
-let cardp2 = document.querySelector("#cardp2")
-let cardo1 = document.querySelector("#cardo1")
-let cardo2 = document.querySelector("#cardo2")
-let cardr1 = document.querySelector("#cardr1")
-let cardr2 = document.querySelector("#cardr2")
-let cardr3 = document.querySelector("#cardr3")
-let cardr4 = document.querySelector("#cardr4")
-let cardr5 = document.querySelector("#cardr5")
 
 
 //Deal:
-function deal (){
-  deck1.deal()
-  console.log(player1.hand)
-  console.log(opponent.hand)
-  console.log(river)
-  console.log(player1.hand[0])
-  console.log(player1.hand[1])
-  p1.innerHTML = player1.hand[0].name;
-  p2.innerHTML = player1.hand[1].name;
-  o1.innerHTML = opponent.hand[0].name;
-  o2.innerHTML = opponent.hand[1].name;
-  r1.innerHTML = river[0].name;
-  r2.innerHTML = river[1].name;
-  r3.innerHTML = river[2].name;
-  r4.innerHTML = river[3].name;
-  r5.innerHTML = river[4].name;
-  // if(p1.innerHTML == "AC"){
-  //   cardp1.style.backgroundimage = ;
-  // }
-}
+function dealNew (){
+    deck1.deal()
+    console.log(player1.hand)
+    console.log(opponent.hand)
+    console.log(river)
+    console.log(player1.hand[0])
+    console.log(player1.hand[1])
+    p1.innerHTML = player1.hand[0].name;
+    p2.innerHTML = player1.hand[1].name;
+    o1.innerHTML = opponent.hand[0].name;
+    o2.innerHTML = opponent.hand[1].name;
+    r1.innerHTML = river[0].name;
+    r2.innerHTML = river[1].name;
+    r3.innerHTML = river[2].name;
+    r4.innerHTML = river[3].name;
+    r5.innerHTML = river[4].name;
+    player1.hand.splice(2,2)       //remove cards from previous hand
+    opponent.hand.splice(2,2) 
+    river.splice(5,5) 
+    console.log(p1.innerHTML)
+  //CHANGE Card Images
+  switch (p1.innerHTML) {
+    case "AH":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/AH.png')"
+      break;
+    case "AC":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/AC.png')"
+      break;
+    case "AD":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/AD.png')"
+      break;
+    case "AS":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/AS.png')"
+      break;
+    
+    case "2H":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/2H.png')"
+      break;
+    case "2C":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/2C.png')"
+      break;
+    case "2D":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/2D.png')"
+      break;
+    case "2S":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/2S.png')"
+      break;
+    
+    case "3H":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/3H.png')"
+      break;
+    case "3C":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/3C.png')"
+      break;
+    case "3D":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/3D.png')"
+      break;
+    case "3S":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/3S.png')"
+      break;
+    
+     case "4H":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/4H.png')"
+      break;
+    case "4C":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/4C.png')"
+      break;
+    case "4D":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/4D.png')"
+      break;
+    case "4S":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/4S.png')"
+      break;
+    
+    case "5H":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/5H.png')"
+      break;
+    case "5C":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/5C.png')"
+      break;
+    case "5D":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/5D.png')"
+      break;
+    case "5S":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/5S.png')"
+      break;
+    
+    case "6H":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/6H.png')"
+      break;
+    case "6C":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/6C.png')"
+      break;
+    case "6D":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/6D.png')"
+      break;
+    case "6S":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/6S.png')"
+      break;
+    
+    case "7H":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/7H.png')"
+      break;
+    case "7C":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/7C.png')"
+      break;
+    case "7D":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/7D.png')"
+      break;
+    case "7S":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/7S.png')"
+      break;
+    
+    case "8H":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/8H.png')"
+      break;
+    case "8C":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/8C.png')"
+      break;
+    case "8D":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/8D.png')"
+      break;
+    case "8S":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/8S.png')"
+      break;
+      
+    case "9H":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/9H.png')"
+      break;
+    case "9C":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/9C.png')"
+      break;
+    case "9D":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/9D.png')"
+      break;
+    case "9S":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/9S.png')"
+      break;
+    
+    case "TH":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/TH.png')"
+      break;
+    case "TC":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/TC.png')"
+      break;
+    case "TD":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/TD.png')"
+      break;
+    case "TS":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/TS.png')"
+      break;
+      
+    case "JH":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/JH.png')"
+      break;
+    case "JC":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/JC.png')"
+      break;
+    case "JD":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/JD.png')"
+      break;
+    case "JS":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/JS.png')"
+      break;
+      
+    case "QH":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/QH.png')"
+      break;
+    case "QC":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/QC.png')"
+      break;
+    case "QD":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/QD.png')"
+      break;
+    case "QS":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/QS.png')"
+      break;
+    
+    case "KH":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/KH.png')"
+      break;
+    case "KC":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/KC.png')"
+      break;
+    case "KD":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/KD.png')"
+      break;
+    case "KS":
+      p1.parentNode.style.backgroundImage = "url('../CardImages/KS.png')"
+      break;
+    default:
+      p1.parentNode.style.backgroundImage = "url('../CardImages/cardBack.png')"
+  } // end of case switch p1
 
 
-//Place your bets
-function placeBet (){
+
+
+ } // end of dealNew()
+
+
+function placeBet (){   //Place your bets
       mydiv.style.display = "";
       options.style.display = "none";
       message.innerHTML = "Placing Bets...."
@@ -230,8 +370,8 @@ function placeBet (){
 }
 
 
-//who wins the round?
-function findWinner(){
+
+function findWinner(){   //who wins the round?
   let hand1 = `${river[0].name} ${river[1].name} ${river[2].name} ${river[3].name} ${river[4].name} ${player1.hand[0].name} ${player1.hand[1].name}`
   let hand2 = `${river[0].name} ${river[1].name} ${river[2].name} ${river[3].name} ${river[4].name} ${opponent.hand[0].name} ${player1.hand[1].name}`
   let winner = poker.judgeWinner([hand1, hand2]); 
@@ -243,7 +383,7 @@ function findWinner(){
     player1.win()
     playerBank.innerHTML = player1.bankaccount
     opponentBank.innerHTML = opponent.bankaccount
-    console.log(1)
+    //console.log(1)
   }else{
     mydiv.style.display = "";
     options.style.display = "none";
@@ -252,7 +392,7 @@ function findWinner(){
     opponent.win()
     playerBank.innerHTML = player1.bankaccount
     opponentBank.innerHTML = opponent.bankaccount
-    console.log(2)
+    //console.log(2)
   }
 }
 
@@ -279,11 +419,3 @@ function gameOver(){
 }
 
 
-
-// for (var i = 0; i < player1.bankaccount; i += 2) {
-
-// int i = 0;
-// while(i < this.getRound() || this.getRounds() == 0) {
-// //some 30 lines code
-// i++
-// }
