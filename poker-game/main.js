@@ -521,6 +521,7 @@ function dealNew (){
       default:
         p2.parentNode.style.backgroundImage = "url('../CardImages/cardBack.png')"
   } // end of case switch p2
+
   switch (o1.innerHTML) {
     case "AH":
       o1.parentNode.style.backgroundImage = "url('../CardImages/AH.png')"
@@ -865,178 +866,867 @@ function dealNew (){
       default:
         o2.parentNode.style.backgroundImage = "url('../CardImages/cardBack.png')"
   } // end of case switch o2
-  // switch (o2.innerHTML) {
-  //   case "AH":
-  //     o2.parentNode.style.backgroundImage = "url('../CardImages/AH.png')"
-  //     break;
-  //   case "AC":
-  //     o2.parentNode.style.backgroundImage = "url('../CardImages/AC.png')"
-  //     break;
-  //   case "AD":
-  //     o2.parentNode.style.backgroundImage = "url('../CardImages/AD.png')"
-  //     break;
-  //   case "AS":
-  //     o2.parentNode.style.backgroundImage = "url('../CardImages/AS.png')"
-  //     break;
+
+  switch (r1.innerHTML) {
+    case "AH":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/AH.png')"
+      break;
+    case "AC":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/AC.png')"
+      break;
+    case "AD":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/AD.png')"
+      break;
+    case "AS":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/AS.png')"
+      break;
     
-  //     case "2H":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/2H.png')"
-  //       break;
-  //     case "2C":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/2C.png')"
-  //       break;
-  //     case "2D":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/2D.png')"
-  //       break;
-  //     case "2S":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/2S.png')"
-  //       break;
+    case "2H":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/2H.png')"
+      break;
+    case "2C":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/2C.png')"
+      break;
+    case "2D":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/2D.png')"
+      break;
+    case "2S":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/2S.png')"
+      break;
+    
+    case "3H":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/3H.png')"
+      break;
+    case "3C":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/3C.png')"
+      break;
+    case "3D":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/3D.png')"
+      break;
+    case "3S":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/3S.png')"
+      break;
+    
+     case "4H":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/4H.png')"
+      break;
+    case "4C":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/4C.png')"
+      break;
+    case "4D":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/4D.png')"
+      break;
+    case "4S":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/4S.png')"
+      break;
+    
+    case "5H":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/5H.png')"
+      break;
+    case "5C":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/5C.png')"
+      break;
+    case "5D":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/5D.png')"
+      break;
+    case "5S":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/5S.png')"
+      break;
+    
+    case "6H":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/6H.png')"
+      break;
+    case "6C":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/6C.png')"
+      break;
+    case "6D":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/6D.png')"
+      break;
+    case "6S":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/6S.png')"
+      break;
+    
+    case "7H":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/7H.png')"
+      break;
+    case "7C":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/7C.png')"
+      break;
+    case "7D":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/7D.png')"
+      break;
+    case "7S":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/7S.png')"
+      break;
+    
+    case "8H":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/8H.png')"
+      break;
+    case "8C":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/8C.png')"
+      break;
+    case "8D":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/8D.png')"
+      break;
+    case "8S":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/8S.png')"
+      break;
       
-  //     case "3H":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/3H.png')"
-  //       break;
-  //     case "3C":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/3C.png')"
-  //       break;
-  //     case "3D":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/3D.png')"
-  //       break;
-  //     case "3S":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/3S.png')"
-  //       break;
+    case "9H":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/9H.png')"
+      break;
+    case "9C":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/9C.png')"
+      break;
+    case "9D":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/9D.png')"
+      break;
+    case "9S":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/9S.png')"
+      break;
+    
+    case "TH":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/TH.png')"
+      break;
+    case "TC":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/TC.png')"
+      break;
+    case "TD":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/TD.png')"
+      break;
+    case "TS":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/TS.png')"
+      break;
       
-  //      case "4H":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/4H.png')"
-  //       break;
-  //     case "4C":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/4C.png')"
-  //       break;
-  //     case "4D":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/4D.png')"
-  //       break;
-  //     case "4S":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/4S.png')"
-  //       break;
+    case "JH":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/JH.png')"
+      break;
+    case "JC":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/JC.png')"
+      break;
+    case "JD":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/JD.png')"
+      break;
+    case "JS":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/JS.png')"
+      break;
       
-  //     case "5H":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/5H.png')"
-  //       break;
-  //     case "5C":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/5C.png')"
-  //       break;
-  //     case "5D":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/5D.png')"
-  //       break;
-  //     case "5S":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/5S.png')"
-  //       break;
+    case "QH":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/QH.png')"
+      break;
+    case "QC":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/QC.png')"
+      break;
+    case "QD":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/QD.png')"
+      break;
+    case "QS":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/QS.png')"
+      break;
+    
+    case "KH":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/KH.png')"
+      break;
+    case "KC":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/KC.png')"
+      break;
+    case "KD":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/KD.png')"
+      break;
+    case "KS":
+      r1.parentNode.style.backgroundImage = "url('../CardImages/KS.png')"
+      break;
+    default:
+      r1.parentNode.style.backgroundImage = "url('../CardImages/cardBack.png')"
+  } // end of case switch r1
+  switch (r2.innerHTML) {
+    case "AH":
+      r2.parentNode.style.backgroundImage = "url('../CardImages/AH.png')"
+      break;
+    case "AC":
+      r2.parentNode.style.backgroundImage = "url('../CardImages/AC.png')"
+      break;
+    case "AD":
+      r2.parentNode.style.backgroundImage = "url('../CardImages/AD.png')"
+      break;
+    case "AS":
+      r2.parentNode.style.backgroundImage = "url('../CardImages/AS.png')"
+      break;
+    
+      case "2H":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/2H.png')"
+        break;
+      case "2C":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/2C.png')"
+        break;
+      case "2D":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/2D.png')"
+        break;
+      case "2S":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/2S.png')"
+        break;
       
-  //     case "6H":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/6H.png')"
-  //       break;
-  //     case "6C":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/6C.png')"
-  //       break;
-  //     case "6D":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/6D.png')"
-  //       break;
-  //     case "6S":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/6S.png')"
-  //       break;
+      case "3H":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/3H.png')"
+        break;
+      case "3C":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/3C.png')"
+        break;
+      case "3D":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/3D.png')"
+        break;
+      case "3S":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/3S.png')"
+        break;
       
-  //     case "7H":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/7H.png')"
-  //       break;
-  //     case "7C":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/7C.png')"
-  //       break;
-  //     case "7D":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/7D.png')"
-  //       break;
-  //     case "7S":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/7S.png')"
-  //       break;
+       case "4H":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/4H.png')"
+        break;
+      case "4C":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/4C.png')"
+        break;
+      case "4D":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/4D.png')"
+        break;
+      case "4S":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/4S.png')"
+        break;
       
-  //     case "8H":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/8H.png')"
-  //       break;
-  //     case "8C":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/8C.png')"
-  //       break;
-  //     case "8D":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/8D.png')"
-  //       break;
-  //     case "8S":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/8S.png')"
-  //       break;
+      case "5H":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/5H.png')"
+        break;
+      case "5C":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/5C.png')"
+        break;
+      case "5D":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/5D.png')"
+        break;
+      case "5S":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/5S.png')"
+        break;
+      
+      case "6H":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/6H.png')"
+        break;
+      case "6C":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/6C.png')"
+        break;
+      case "6D":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/6D.png')"
+        break;
+      case "6S":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/6S.png')"
+        break;
+      
+      case "7H":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/7H.png')"
+        break;
+      case "7C":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/7C.png')"
+        break;
+      case "7D":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/7D.png')"
+        break;
+      case "7S":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/7S.png')"
+        break;
+      
+      case "8H":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/8H.png')"
+        break;
+      case "8C":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/8C.png')"
+        break;
+      case "8D":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/8D.png')"
+        break;
+      case "8S":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/8S.png')"
+        break;
         
-  //     case "9H":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/9H.png')"
-  //       break;
-  //     case "9C":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/9C.png')"
-  //       break;
-  //     case "9D":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/9D.png')"
-  //       break;
-  //     case "9S":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/9S.png')"
-  //       break;
+      case "9H":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/9H.png')"
+        break;
+      case "9C":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/9C.png')"
+        break;
+      case "9D":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/9D.png')"
+        break;
+      case "9S":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/9S.png')"
+        break;
       
-  //     case "TH":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/TH.png')"
-  //       break;
-  //     case "TC":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/TC.png')"
-  //       break;
-  //     case "TD":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/TD.png')"
-  //       break;
-  //     case "TS":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/TS.png')"
-  //       break;
+      case "TH":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/TH.png')"
+        break;
+      case "TC":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/TC.png')"
+        break;
+      case "TD":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/TD.png')"
+        break;
+      case "TS":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/TS.png')"
+        break;
         
-  //     case "JH":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/JH.png')"
-  //       break;
-  //     case "JC":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/JC.png')"
-  //       break;
-  //     case "JD":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/JD.png')"
-  //       break;
-  //     case "JS":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/JS.png')"
-  //       break;
+      case "JH":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/JH.png')"
+        break;
+      case "JC":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/JC.png')"
+        break;
+      case "JD":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/JD.png')"
+        break;
+      case "JS":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/JS.png')"
+        break;
         
-  //     case "QH":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/QH.png')"
-  //       break;
-  //     case "QC":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/QC.png')"
-  //       break;
-  //     case "QD":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/QD.png')"
-  //       break;
-  //     case "QS":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/QS.png')"
-  //       break;
+      case "QH":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/QH.png')"
+        break;
+      case "QC":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/QC.png')"
+        break;
+      case "QD":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/QD.png')"
+        break;
+      case "QS":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/QS.png')"
+        break;
       
-  //     case "KH":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/KH.png')"
-  //       break;
-  //     case "KC":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/KC.png')"
-  //       break;
-  //     case "KD":
-  //       o2.parentNode.style.backgroundImage = "url('../CardImages/KD.png')"
-  //       break;
-  //     case "KS":
-  //       r1.parentNode.style.backgroundImage = "url('../CardImages/KS.png')"
-  //       break;
-  //     default:
-  //       r1.parentNode.style.backgroundImage = "url('../CardImages/cardBack.png')"
-  // } // end of case switch r0
+      case "KH":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/KH.png')"
+        break;
+      case "KC":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/KC.png')"
+        break;
+      case "KD":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/KD.png')"
+        break;
+      case "KS":
+        r2.parentNode.style.backgroundImage = "url('../CardImages/KS.png')"
+        break;
+      default:
+        r2.parentNode.style.backgroundImage = "url('../CardImages/cardBack.png')"
+  } // end of case switch r2
+  switch (r3.innerHTML) {
+    case "AH":
+      r3.parentNode.style.backgroundImage = "url('../CardImages/AH.png')"
+      break;
+    case "AC":
+      r3.parentNode.style.backgroundImage = "url('../CardImages/AC.png')"
+      break;
+    case "AD":
+      r3.parentNode.style.backgroundImage = "url('../CardImages/AD.png')"
+      break;
+    case "AS":
+      r3.parentNode.style.backgroundImage = "url('../CardImages/AS.png')"
+      break;
+    
+      case "2H":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/2H.png')"
+        break;
+      case "2C":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/2C.png')"
+        break;
+      case "2D":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/2D.png')"
+        break;
+      case "2S":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/2S.png')"
+        break;
+      
+      case "3H":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/3H.png')"
+        break;
+      case "3C":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/3C.png')"
+        break;
+      case "3D":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/3D.png')"
+        break;
+      case "3S":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/3S.png')"
+        break;
+      
+       case "4H":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/4H.png')"
+        break;
+      case "4C":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/4C.png')"
+        break;
+      case "4D":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/4D.png')"
+        break;
+      case "4S":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/4S.png')"
+        break;
+      
+      case "5H":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/5H.png')"
+        break;
+      case "5C":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/5C.png')"
+        break;
+      case "5D":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/5D.png')"
+        break;
+      case "5S":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/5S.png')"
+        break;
+      
+      case "6H":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/6H.png')"
+        break;
+      case "6C":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/6C.png')"
+        break;
+      case "6D":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/6D.png')"
+        break;
+      case "6S":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/6S.png')"
+        break;
+      
+      case "7H":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/7H.png')"
+        break;
+      case "7C":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/7C.png')"
+        break;
+      case "7D":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/7D.png')"
+        break;
+      case "7S":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/7S.png')"
+        break;
+      
+      case "8H":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/8H.png')"
+        break;
+      case "8C":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/8C.png')"
+        break;
+      case "8D":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/8D.png')"
+        break;
+      case "8S":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/8S.png')"
+        break;
+        
+      case "9H":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/9H.png')"
+        break;
+      case "9C":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/9C.png')"
+        break;
+      case "9D":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/9D.png')"
+        break;
+      case "9S":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/9S.png')"
+        break;
+      
+      case "TH":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/TH.png')"
+        break;
+      case "TC":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/TC.png')"
+        break;
+      case "TD":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/TD.png')"
+        break;
+      case "TS":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/TS.png')"
+        break;
+        
+      case "JH":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/JH.png')"
+        break;
+      case "JC":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/JC.png')"
+        break;
+      case "JD":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/JD.png')"
+        break;
+      case "JS":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/JS.png')"
+        break;
+        
+      case "QH":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/QH.png')"
+        break;
+      case "QC":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/QC.png')"
+        break;
+      case "QD":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/QD.png')"
+        break;
+      case "QS":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/QS.png')"
+        break;
+      
+      case "KH":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/KH.png')"
+        break;
+      case "KC":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/KC.png')"
+        break;
+      case "KD":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/KD.png')"
+        break;
+      case "KS":
+        r3.parentNode.style.backgroundImage = "url('../CardImages/KS.png')"
+        break;
+      default:
+        r3.parentNode.style.backgroundImage = "url('../CardImages/cardBack.png')"
+  }//end of r3
+  switch (r4.innerHTML) {
+    case "AH":
+      r4.parentNode.style.backgroundImage = "url('../CardImages/AH.png')"
+      break;
+    case "AC":
+      r4.parentNode.style.backgroundImage = "url('../CardImages/AC.png')"
+      break;
+    case "AD":
+      r4.parentNode.style.backgroundImage = "url('../CardImages/AD.png')"
+      break;
+    case "AS":
+      r4.parentNode.style.backgroundImage = "url('../CardImages/AS.png')"
+      break;
+    
+      case "2H":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/2H.png')"
+        break;
+      case "2C":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/2C.png')"
+        break;
+      case "2D":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/2D.png')"
+        break;
+      case "2S":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/2S.png')"
+        break;
+      
+      case "3H":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/3H.png')"
+        break;
+      case "3C":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/3C.png')"
+        break;
+      case "3D":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/3D.png')"
+        break;
+      case "3S":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/3S.png')"
+        break;
+      
+       case "4H":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/4H.png')"
+        break;
+      case "4C":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/4C.png')"
+        break;
+      case "4D":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/4D.png')"
+        break;
+      case "4S":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/4S.png')"
+        break;
+      
+      case "5H":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/5H.png')"
+        break;
+      case "5C":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/5C.png')"
+        break;
+      case "5D":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/5D.png')"
+        break;
+      case "5S":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/5S.png')"
+        break;
+      
+      case "6H":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/6H.png')"
+        break;
+      case "6C":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/6C.png')"
+        break;
+      case "6D":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/6D.png')"
+        break;
+      case "6S":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/6S.png')"
+        break;
+      
+      case "7H":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/7H.png')"
+        break;
+      case "7C":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/7C.png')"
+        break;
+      case "7D":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/7D.png')"
+        break;
+      case "7S":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/7S.png')"
+        break;
+      
+      case "8H":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/8H.png')"
+        break;
+      case "8C":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/8C.png')"
+        break;
+      case "8D":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/8D.png')"
+        break;
+      case "8S":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/8S.png')"
+        break;
+        
+      case "9H":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/9H.png')"
+        break;
+      case "9C":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/9C.png')"
+        break;
+      case "9D":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/9D.png')"
+        break;
+      case "9S":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/9S.png')"
+        break;
+      
+      case "TH":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/TH.png')"
+        break;
+      case "TC":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/TC.png')"
+        break;
+      case "TD":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/TD.png')"
+        break;
+      case "TS":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/TS.png')"
+        break;
+        
+      case "JH":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/JH.png')"
+        break;
+      case "JC":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/JC.png')"
+        break;
+      case "JD":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/JD.png')"
+        break;
+      case "JS":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/JS.png')"
+        break;
+        
+      case "QH":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/QH.png')"
+        break;
+      case "QC":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/QC.png')"
+        break;
+      case "QD":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/QD.png')"
+        break;
+      case "QS":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/QS.png')"
+        break;
+      
+      case "KH":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/KH.png')"
+        break;
+      case "KC":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/KC.png')"
+        break;
+      case "KD":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/KD.png')"
+        break;
+      case "KS":
+        r4.parentNode.style.backgroundImage = "url('../CardImages/KS.png')"
+        break;
+      default:
+        r4.parentNode.style.backgroundImage = "url('../CardImages/cardBack.png')"
+  } //end of r4
+  switch (r5.innerHTML) {
+    case "AH":
+      r5.parentNode.style.backgroundImage = "url('../CardImages/AH.png')"
+      break;
+    case "AC":
+      r5.parentNode.style.backgroundImage = "url('../CardImages/AC.png')"
+      break;
+    case "AD":
+      r5.parentNode.style.backgroundImage = "url('../CardImages/AD.png')"
+      break;
+    case "AS":
+      r5.parentNode.style.backgroundImage = "url('../CardImages/AS.png')"
+      break;
+    
+      case "2H":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/2H.png')"
+        break;
+      case "2C":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/2C.png')"
+        break;
+      case "2D":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/2D.png')"
+        break;
+      case "2S":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/2S.png')"
+        break;
+      
+      case "3H":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/3H.png')"
+        break;
+      case "3C":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/3C.png')"
+        break;
+      case "3D":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/3D.png')"
+        break;
+      case "3S":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/3S.png')"
+        break;
+      
+       case "4H":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/4H.png')"
+        break;
+      case "4C":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/4C.png')"
+        break;
+      case "4D":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/4D.png')"
+        break;
+      case "4S":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/4S.png')"
+        break;
+      
+      case "5H":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/5H.png')"
+        break;
+      case "5C":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/5C.png')"
+        break;
+      case "5D":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/5D.png')"
+        break;
+      case "5S":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/5S.png')"
+        break;
+      
+      case "6H":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/6H.png')"
+        break;
+      case "6C":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/6C.png')"
+        break;
+      case "6D":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/6D.png')"
+        break;
+      case "6S":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/6S.png')"
+        break;
+      
+      case "7H":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/7H.png')"
+        break;
+      case "7C":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/7C.png')"
+        break;
+      case "7D":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/7D.png')"
+        break;
+      case "7S":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/7S.png')"
+        break;
+      
+      case "8H":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/8H.png')"
+        break;
+      case "8C":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/8C.png')"
+        break;
+      case "8D":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/8D.png')"
+        break;
+      case "8S":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/8S.png')"
+        break;
+        
+      case "9H":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/9H.png')"
+        break;
+      case "9C":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/9C.png')"
+        break;
+      case "9D":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/9D.png')"
+        break;
+      case "9S":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/9S.png')"
+        break;
+      
+      case "TH":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/TH.png')"
+        break;
+      case "TC":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/TC.png')"
+        break;
+      case "TD":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/TD.png')"
+        break;
+      case "TS":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/TS.png')"
+        break;
+        
+      case "JH":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/JH.png')"
+        break;
+      case "JC":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/JC.png')"
+        break;
+      case "JD":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/JD.png')"
+        break;
+      case "JS":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/JS.png')"
+        break;
+        
+      case "QH":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/QH.png')"
+        break;
+      case "QC":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/QC.png')"
+        break;
+      case "QD":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/QD.png')"
+        break;
+      case "QS":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/QS.png')"
+        break;
+      
+      case "KH":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/KH.png')"
+        break;
+      case "KC":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/KC.png')"
+        break;
+      case "KD":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/KD.png')"
+        break;
+      case "KS":
+        r5.parentNode.style.backgroundImage = "url('../CardImages/KS.png')"
+        break;
+      default:
+        r5.parentNode.style.backgroundImage = "url('../CardImages/cardBack.png')"
+  } // end of case switch r5
 
 
 
